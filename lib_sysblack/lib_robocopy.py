@@ -18,7 +18,7 @@ def copy_mirror(**kwargs):
 
     destiny_path = kwargs.pop("destiny_path")
     source_path = kwargs.pop("source_path")
-    copy_options = kwargs.pop("copy_options")
+    copy_options = kwargs.pop("copy_options", "")
 
     binary = kwargs.pop("binary")
     format_command = kwargs.pop("format_command")

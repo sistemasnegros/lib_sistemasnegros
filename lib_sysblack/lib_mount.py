@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-
 import logging
 
 # Falta desarollar la compatibilidad con linux
