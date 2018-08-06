@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
     name='lib_sysblack',
     packages=['lib_sysblack'],  # this must be the same as the name above
-    version='0.1.2',
+    version='0.1.2.3',
     description='Librerias y utilidades para rutinas automatizacion',
     author='Kevin Franco',
     author_email='sistemasnegros@gmail.com',

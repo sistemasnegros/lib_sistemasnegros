@@ -15,11 +15,11 @@ def folder_incremental(path_name_temp, ruta_destino, numero_copias=10, prefijo="
         # solo se ejecuta una vez
         if iterador == 0:
             # Borro la ultima copia realizada
-            delete_ultimate_backup(ruta_destino, numero_copias)
+            delete_ultimate_backup(ruta_destino, numero_copias, prefijo)
 
         else:
             # Renombre de forma desendente los folder
-            rename_folder(ruta_destino, ultimo_elemento)
+            rename_folder(ruta_destino, ultimo_elemento, prefijo)
 
             ultimo_elemento = ultimo_elemento - 1
 
@@ -29,7 +29,9 @@ def folder_incremental(path_name_temp, ruta_destino, numero_copias=10, prefijo="
 
             folder_lastest = "%s-%s" % (prefijo, ultimo_elemento)
             folder_lastest = ruta_destino.child(folder_lastest)
-            os.mkdir(folder_lastest)
+
+            if not os.path.exists(folder_lastest):
+                os.mkdir(folder_lastest)
 
     folder_latest = "%s-%s" % (prefijo, ultimo_elemento)
     folder_latest = ruta_destino.child(folder_latest)

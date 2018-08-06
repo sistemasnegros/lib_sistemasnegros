@@ -20,3 +20,5 @@ def run_command(comando):
     if salida_cmd:
         logging.info('Comando ejecutado saticfactoriamente: {}.'.format(comando))
         logging.debug(salida_cmd)
+
+    return salida_error_cmd, salida_cmd
